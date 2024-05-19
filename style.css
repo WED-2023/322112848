@@ -1,7 +1,114 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #303032;
+    background-color: #d5c8b8;
+    margin: 0px;
+  } 
+
+  .topnav {
+    background-color: #70592d;
+    position: fixed;
+    top: 0px;
+  }
+
+  #about_me{
+    margin-top: 50px;
+  }
+  .topnav a {
+    float: left;
+    color: #d5c8b8;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: #9fded5;
+    color: #303032;
+  }
+#scroll-container {
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  #scroll-text {
+    color: #303032;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: my-animation 15s linear infinite;
+    -webkit-animation: my-animation 15s linear infinite;
+    animation: my-animation 15s linear infinite;
+  }
+  
+  /* for Firefox */
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  } 
+  
+  /* for Chrome */
+   @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    } 
 }
+img.thumbnail {
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    padding: 5px; 
+    width: 150px;
+  }
+img.avatar{
+    float: left;
+    vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+  img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  .container {
+    background: #9fded5;
+    padding: 20px;
+    margin: 20px 8% 20px;
+  }
+
+  .footer{
+    position: absolute;
+    background-color: 	#303032;
+    width: 100%;
+  }
+  .footer a:hover {
+    margin: 0px;
+    background-color: #b2daed;
+    color: 	#70592d;
+  }
+
+  .footer a {
+    float: left;
+    color: #d5c8b8;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  
+
+  
