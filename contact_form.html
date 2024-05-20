@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Form</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://unpkg.com/pickr/dist/pickr.min.js"></script>  
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/pickr/dist/pickr.min.css">
+    </head>
+    <body>
+        <form id="contactForm" class="container">
+            <h2>Contact me and let's get Shwifty!</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <div id="emoji-options">
+                <span class="emoji-option" onclick="addEmoji('😀')">😀</span>
+                <span class="emoji-option" onclick="addEmoji('😊')">😊</span>
+                <span class="emoji-option" onclick="addEmoji('👍')">👍</span>
+                <span class="emoji-option" onclick="addEmoji('❤️')">❤️</span>
+                <span class="emoji-option" onclick="addEmoji('🎉')">🎉</span>
+            </div>
+            <input type="text" id="message" placeholder="Type here your massage">
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <script>
+            function addEmoji(emoji) {
+            var inputField = document.getElementById('message');
+            var currentText = inputField.value;
+
+            // Check if the input field already has text
+            if (currentText.length > 0) {
+                // Add the emoji with a space separator
+                inputField.value = currentText + ' ' + emoji;
+            } else {
+                // If the input field is empty, just add the emoji
+                inputField.value = emoji;
+            }
+
+            // Set focus back to the input field after adding emoji
+            inputField.focus();}
+        </script>
+        <script>
+                // Handle form submission
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting the traditional way
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Create mailto link
+                    const subject = encodeURIComponent('Contact Form Submission');
+                    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                    const mailtoLink = `mailto:oliynich@bgu.post.ac.il?subject=${subject}&body=${body}`;
+                    
+                    // Open mail client
+                    window.location.href = mailtoLink;
+                });
+        </script>
+    </body>
+</html>

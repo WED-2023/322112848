@@ -6,6 +6,7 @@
   <title>Rick Sanchez</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:url"           content="https://wed-2023.github.io/322112848/" />
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -62,7 +63,7 @@
       </div>
       <div class="container">
           <a name="playlist"><h2>My Playlist</h2></a>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=81eA6zbNTPeulWav&amp;list=PL9TElDoBt44KSuaByjFHbLfBbQGQ-n02x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe class="video" src="https://www.youtube.com/embed/videoseries?si=81eA6zbNTPeulWav&amp;list=PL9TElDoBt44KSuaByjFHbLfBbQGQ-n02x" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       
       <div class="container">
@@ -78,6 +79,7 @@
                       </ul>
                   
                   </li>
+                  <br>
                   <li>
                       Explain the differences you wrote in Q1 who it will look like in each web version using use case
                       <br>
@@ -90,16 +92,16 @@
                   </li>
               </ol>
           </p>
-
       </div>
 
       <div class="footer">
-          <a name="contact me"><h2>Contact me</h2></a>
-          <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61553475167395&width=450&layout&action&size&share=false&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-          <div class="fb-like" data-href="https://www.facebook.com/profile.php?id=61553475167395" data-width="" data-layout="" data-action="" data-size="" data-share="false"></div>
-      </div>
+          <a name="contact me" onclick="openContactForm()"><h2>Contact me</h2></a>
+          <img class="qr" src="Data/QR-Code.png" alt="QR Code">
+          <div class="fb-like" data-href="https://wed-2023.github.io/322112848/" data-width="100px" data-layout="box_count" data-action="like" data-size="small" data-share="false"></div>
+        </div>
 
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="umUxVAFH"></script>
+<script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
 <script type="text/javascript">
 $(function(){
   $("#nav a").click(function(e){
@@ -108,10 +110,10 @@ $(function(){
   });
 });
 </script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
+<script>
+  function openContactForm() {
+      window.open('contact_form.html', 'Contact Form', 'width=600,height=400');
+  }
+</script>
 </body>
 </html>

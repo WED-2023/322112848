@@ -9,6 +9,7 @@ body {
     background-color: #70592d;
     position: fixed;
     top: 0px;
+	width: 100%;
   }
 
   #about_me{
@@ -80,20 +81,27 @@ img.avatar{
   height: 50px;
   border-radius: 50%;
 }
+img.qr{
+	float: right;
+	width: 100px;
+  	height: 100px;
+	margin: 0 20px;
+}
   img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   }
 
   .container {
     background: #9fded5;
-    padding: 20px;
-    margin: 20px 8% 20px;
+    padding: 30px;
+    margin: 20px 8%;
   }
 
   .footer{
     position: absolute;
     background-color: 	#303032;
     width: 100%;
+	padding: 20px;
   }
   .footer a:hover {
     margin: 0px;
@@ -108,7 +116,56 @@ img.avatar{
     text-decoration: none;
     font-size: 17px;
   }
+  .video{
+	vertical-align: middle;
+	align-self: center;
+	margin :2% 25%;
+  } 
 
+  .fb-like{
+	float: right;
+  }
+  form {
+	max-width: 500px;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+input, textarea {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+button {
+	padding: 10px 20px;
+	background-color: #70592d;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: #96773d;
+}
+
+.emoji-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .emoji {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
   
 
   
